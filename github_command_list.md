@@ -23,14 +23,14 @@ git push -u origin main
 git add .
 git restore --staged [your file name]
 ```
-After Commit
-
+#After Commit
+```bash
 git log
 git log --oneline
 git revert [your specific hash code]
-
-After Push
-
+```
+#After Push
+```bash
 git reset HEAD~1
 # or
 git reset --soft HEAD~1
@@ -38,10 +38,12 @@ git reset --soft HEAD~1
 git reset --mixed HEAD~1
 # or
 git reset --hard HEAD~1
+```
 
-⚡ Git Aliases
+## ⚡ Git Aliases
 Create Global and Local Git Aliases
 
+```bash
 Go to your root directory:
 
 ls -a
@@ -60,56 +62,61 @@ Or directly via command:
 
 git config alias.[shortcut] "any git command"
 git config alias.[shortcut] "any git command" --global
+```
 
-🌿 GitHub Branch Commands
-Branch Create
-
+## 🌿 GitHub Branch Commands
+# Branch Create
+```bash
 git branch [new-branch-name]
 git checkout -b [new-branch-name]
 git switch -c [new-branch-name]
-
-Branch Switch
-
+```
+# Branch Switch
+```bash
 git checkout [branch-name]
 git switch [branch-name]
-
-Branch Delete
-
+```
+# Branch Delete
+```bash
 git branch -D [branch-name]
-
-Branch Merge
-
+```
+# Branch Merge
+```bash
 git merge [branch-name]
 git push -u origin [branch-name]
-
-Change Default Branch
-
+```
+# Change Default Branch
+```bash
 git branch -M [default-branch-name]
+```
 
-🛠️ Fix Git Commits
+## 🛠️ Fix Git Commits
 Amend Last Commit
-
+```bash
 git commit --amend
 # Then ESC + :wq + ENTER
 
 Or directly:
 
 git commit --amend -m "new commit message"
+```
 
-📥 Git Clone
-
+## 📥 Git Clone
+```bash
 git clone [repository HTTPS/SSH link]
 git clone [repository HTTPS/SSH link] .
 git clone --branch [branch-name] [repository HTTPS/SSH link]
+```
 
-🔄 Git Pull & Fetch
-
+## 🔄 Git Pull & Fetch
+```bash
 git pull origin [branch-name]
 git fetch origin
 git merge origin/[branch-name]
+```
 
-👀 Show Code Changes
-
+## 👀 Show Code Changes
+```bash
 git diff
 # or
 git diff --staged               # after add
@@ -121,15 +128,17 @@ git diff [hash-Y] [hash-X]
 git diff --name-only
 # or
 git diff --color-words
+```
 
-⏭️ Skip Staging Area
-
+## ⏭️ Skip Staging Area
+```bash
 git commit -a -m "your commit message"
 # or
 git commit ./[file-name] -m "your commit message"
+```
 
-📦 Git Stash
-
+##📦 Git Stash
+```bash
 git stash
 git stash list
 git stash apply
@@ -138,3 +147,4 @@ git stash apply stash@{[stash-number]}
 # or
 git stash pop
 git stash clear
+```
