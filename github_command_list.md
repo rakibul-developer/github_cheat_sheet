@@ -137,7 +137,7 @@ git commit -a -m "your commit message"
 git commit ./[file-name] -m "your commit message"
 ```
 
-##📦 Git Stash
+## 📦 Git Stash
 ```bash
 git stash
 git stash list
