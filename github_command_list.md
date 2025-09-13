@@ -1,119 +1,138 @@
-**All GitHub Config List**
-    git config --global user.name "your github name"
-    git config --global user.email "your github email"
-    git config --list
+# 🚀 Git & GitHub Commands Cheat Sheet
 
-**Command Of Project Setup In GitHub**
-    git init
-    git add [specific file] or git add .
-    git commit -m "write your comments"
-    git branch -M main
-    git remote add origin [your github project repository link]
-    git push -u origin main
-	
-**Command Of Files Or Code Restore**
-    *AFTER STATE MOOD*
-    git add .
-    git restore --staged [your file name]
-    
-    *AFTER COMMITE MOOD*
-    git log or git log --oneline
-    git revert [your specific hash code]
+## 🔧 Git Configuration
+```bash
+git config --global user.name "your github name"
+git config --global user.email "your github email"
+git config --list
 
-    **AFTER PUSH MOOD**
-    git reset HEAD~1
-    or
-    git reset --soft HEAD~1
-    or
-    git reset --mixed HEAD~1
-    or
-    git reset --hard HEAD~1
+📂 Project Setup in GitHub
 
-**Create Global and Local Git Aliases**
-    go to your root directory
-    ls -a
-    nano .gitconfig
-    now write your shortcut like this
-        [alias]
-            [your shortcut] = any git command
-    enter CTRL + S and CTRL + Y
-    
+git init
+git add [specific file]        # or git add .
+git commit -m "write your comments"
+git branch -M main
+git remote add origin [your github project repository link]
+git push -u origin main
 
-    or
+🔄 Restore Files or Code
+After Staged (before commit)
 
-    git config alias.[your shortcut] any git command
-    or
-    git config alias.[your shortcut] any git command --global
+git add .
+git restore --staged [your file name]
 
-**Command Of GitHub Branches**
-    *BRANCE CREATE*
-    git branch [your new branch name]
-    git checkout -b [your new branch name]
-    git switch -c [your new branch name]
+After Commit
 
-    *BRANCE SWITCH*
-    git checkout [your branch name]
-    git switch [your branch name]
+git log
+git log --oneline
+git revert [your specific hash code]
 
-    *BRANCE DELETE*
-    git branch -D [your branch name]
+After Push
 
-    *BRANCE MERGE*
-    git merge [your branch name]
-    git push -u origin [your branch name]
+git reset HEAD~1
+# or
+git reset --soft HEAD~1
+# or
+git reset --mixed HEAD~1
+# or
+git reset --hard HEAD~1
 
-    *DEFAULT BRANCE CHANGE*
-    git branch -M [your default branch name]
+⚡ Git Aliases
+Create Global and Local Git Aliases
 
-**Fix Git Commits**
-    git commit --amend
-    ESC and wq and ENTER
-    
-    or
+Go to your root directory:
 
-    git commit --amend -m "[write your commit]"
+ls -a
+nano .gitconfig
 
-**Git Clone Command**
-    git clone [repository HTTPS/SSH link]
-    or
-    git clone [repository HTTPS/SSH link] .
-    or
-    git clone --branch [specific branch name] [repository HTTPS/SSH link]
+Write your shortcuts like this:
 
-**Git Pull and Git Fetch**
-    git pull origin [specific branch name]
-    git fetch origin
-    git merge origin/[specific branch name]
+[alias]
+    st = status
+    co = checkout
+    cm = commit -m
 
-***Show Changes Of Code***
-    git diff
-    or
-    git diff --staged //after add
-    or
-    git diff origin/[your branch name] //after commit
-    or
-    git diff [github hash code Y] [github hash code X]
-    or
-    git diff --name-only
-    or
-    or git diff --color-words
+Save with CTRL + S and CTRL + X.
 
-**Skip Git Staging Area**
-    git commit -a -m "[your commit message]"
-    or
-    git commit ./[specific file name] -m "[your commit message]"
+Or directly via command:
 
-**Git Stash Command**
-    git stash
-    git stash list
-    git stash apply
-    or
-    git stash apply stash@{[specific commit number of stash mood]}
-    or
-    git stash pop
-    git stash clear
+git config alias.[shortcut] "any git command"
+git config alias.[shortcut] "any git command" --global
 
+🌿 GitHub Branch Commands
+Branch Create
 
+git branch [new-branch-name]
+git checkout -b [new-branch-name]
+git switch -c [new-branch-name]
 
+Branch Switch
 
-    
+git checkout [branch-name]
+git switch [branch-name]
+
+Branch Delete
+
+git branch -D [branch-name]
+
+Branch Merge
+
+git merge [branch-name]
+git push -u origin [branch-name]
+
+Change Default Branch
+
+git branch -M [default-branch-name]
+
+🛠️ Fix Git Commits
+Amend Last Commit
+
+git commit --amend
+# Then ESC + :wq + ENTER
+
+Or directly:
+
+git commit --amend -m "new commit message"
+
+📥 Git Clone
+
+git clone [repository HTTPS/SSH link]
+git clone [repository HTTPS/SSH link] .
+git clone --branch [branch-name] [repository HTTPS/SSH link]
+
+🔄 Git Pull & Fetch
+
+git pull origin [branch-name]
+git fetch origin
+git merge origin/[branch-name]
+
+👀 Show Code Changes
+
+git diff
+# or
+git diff --staged               # after add
+# or
+git diff origin/[branch-name]   # after commit
+# or
+git diff [hash-Y] [hash-X]
+# or
+git diff --name-only
+# or
+git diff --color-words
+
+⏭️ Skip Staging Area
+
+git commit -a -m "your commit message"
+# or
+git commit ./[file-name] -m "your commit message"
+
+📦 Git Stash
+
+git stash
+git stash list
+git stash apply
+# or
+git stash apply stash@{[stash-number]}
+# or
+git stash pop
+git stash clear
