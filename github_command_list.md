@@ -65,7 +65,7 @@ git config alias.[shortcut] "any git command" --global
 ```
 
 ## 🌿 GitHub Branch Commands
-# Branch Create
+### Branch Create
 ```bash
 git branch [new-branch-name]
 git checkout -b [new-branch-name]
