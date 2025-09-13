@@ -5,22 +5,24 @@
 git config --global user.name "your github name"
 git config --global user.email "your github email"
 git config --list
+```
+## 📂 Project Setup in GitHub
 
-📂 Project Setup in GitHub
-
+```bash 
 git init
 git add [specific file]        # or git add .
 git commit -m "write your comments"
 git branch -M main
 git remote add origin [your github project repository link]
 git push -u origin main
+```
+## 🔄 Restore Files or Code
 
-🔄 Restore Files or Code
-After Staged (before commit)
-
+#After Staged (before commit)
+``` bash
 git add .
 git restore --staged [your file name]
-
+```
 After Commit
 
 git log
