@@ -18,18 +18,18 @@ git push -u origin main
 ```
 ## 🔄 Restore Files or Code
 
-#After Staged (before commit)
+### After Staged (before commit)
 ``` bash
 git add .
 git restore --staged [your file name]
 ```
-#After Commit
+### After Commit
 ```bash
 git log
 git log --oneline
 git revert [your specific hash code]
 ```
-#After Push
+### After Push
 ```bash
 git reset HEAD~1
 # or
@@ -71,21 +71,21 @@ git branch [new-branch-name]
 git checkout -b [new-branch-name]
 git switch -c [new-branch-name]
 ```
-# Branch Switch
+### Branch Switch
 ```bash
 git checkout [branch-name]
 git switch [branch-name]
 ```
-# Branch Delete
+### Branch Delete
 ```bash
 git branch -D [branch-name]
 ```
-# Branch Merge
+### Branch Merge
 ```bash
 git merge [branch-name]
 git push -u origin [branch-name]
 ```
-# Change Default Branch
+### Change Default Branch
 ```bash
 git branch -M [default-branch-name]
 ```
